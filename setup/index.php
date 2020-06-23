@@ -135,7 +135,7 @@ if (isset($_POST['setup'])) {
         ?>
         <form name="setup" method="post">
             <hr>
-            <h5>Database</h5>
+            <h5>MySQL or MariaDB Database Server</h5>
             <div class="form-group">
                 <label for="exampleInputEmail1">Database Host Name</label>
                 <input type="text" class="form-control" name="input_database_host_name" value="<?=(isset($_POST['input_database_host_name'])) ? trim($_POST['input_database_host_name']) : 'localhost'?>" placeholder="Enter host name or IP address" required>
