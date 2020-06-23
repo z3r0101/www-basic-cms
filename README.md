@@ -7,8 +7,8 @@ If you haven't created, follow this instructions: https://github.com/z3r0101/app
 1. Go to your web project directory
 2. Run the following git command below:
 ```
-# git init .<br>
-# git remote add -t \* -f origin https://github.com/z3r0101/www-content.git<br>
+# git init .
+# git remote add -t \* -f origin https://github.com/z3r0101/www-content.git
 # git pull https://github.com/z3r0101/www-content.git
 ```
 or (One liner command)
