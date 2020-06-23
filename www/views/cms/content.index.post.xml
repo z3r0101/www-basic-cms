@@ -1,0 +1,30 @@
+<cms>
+    <header>
+        <title id="postTitle">Content</title>
+        <blurb id="headerBlurb"></blurb>
+        <style>
+            <![CDATA[
+
+            ]]>
+        </style>
+    </header>
+    <body
+            id="content"
+            table_name="content"
+            saveclose="true"
+            save_message="Content saved."
+            save_message_button_new_caption="Create new content"
+            save_message_autoclose="false"
+    >
+        <panel caption="Details">
+            <control type="upload" id="content_image" img_aspect_ratio="600:600" upload_parent_dir="content" upload_container_dir="image"></control>
+            <control type="text" id="content_title" caption="Title" placeholder="" required="true"></control>
+            <control type="text" input-type="date" id="content_date" caption="Date" placeholder="" required="true"></control>
+            <control type="html" id="content_description" caption="Description" placeholder="" required="true"></control>
+        </panel>
+        <script>
+            <![CDATA[
+            ]]>
+        </script>
+    </body>
+</cms>

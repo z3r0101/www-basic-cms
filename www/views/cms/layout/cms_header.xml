@@ -1,0 +1,13 @@
+<header>
+    <brand>
+        <img src="[RES_CMS_URL]images/logo.png" />
+    </brand>
+    <menu>
+        <div class="navbar-form navbar-left" role="search">
+            <script>
+                <![CDATA[
+                ]]>
+            </script>
+        </div>
+    </menu>
+</header>

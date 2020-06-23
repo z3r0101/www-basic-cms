@@ -1,0 +1,51 @@
+<cms>
+    <header>
+        <title id="listTitle">Content</title>
+        <blurb id="headerBlurb"></blurb>
+        <style cms-style-name="case">
+            <![CDATA[
+            ]]>
+        </style>
+    </header>
+    <body>
+        <datatable>
+            <table
+                    id="content"
+                    table_select="
+                        SELECT
+                            content_id,
+                            content_slug,
+                            content_title,
+                            content_date,
+                            content_description
+                        FROM
+                            content
+                    "
+                    table_name="content"
+                    primary_key="content_id"
+                    table_where=""
+                    table_order_by="content_date DESC, content_id DESC"
+                    table_order_field=""
+                    datatable_paging="true"
+                    datatable_info="true"
+                    datatable_filter="true"
+            >
+                <body>
+                    <column type="data" fieldname="content_title" caption="Title" sortable="true" searchable="true" width="20%" class="dt-body-left"></column>
+                    <column type="data" fieldname="content_date" caption="Date" sortable="true" searchable="true" width="15%" class="dt-body-left"></column>
+                    <column id="dtAction" type="action" class="dt-body-center" width="10%">
+                        <button type="edit">Edit</button>
+                        <button type="delete">Delete</button>
+                    </column>
+                </body>
+                <buttons>
+                    <button type="add" id="dtAdd">Add Content</button>
+                </buttons>
+            </table>
+        </datatable>
+        <script cms-javascript-name="case">
+            <![CDATA[
+            ]]>
+        </script>
+    </body>
+</cms>
