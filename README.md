@@ -23,5 +23,5 @@ git_repo_url=https://github.com/z3r0101/www-content.git; git init .; git remote 
 4. Fill-up the z3r0101 setup form and submit.
 
 ## Live demo 
-Front-end: <a href="http://z3r0101.com/demo/content" target="_blank">http://z3r0101.com/demo/content</a><br>
-CMS: <a href="http://z3r0101.com/demo/content/cms" target="_blank">http://z3r0101.com/demo/content/cms</a>
+Front-end: http://z3r0101.com/demo/content<br>
+CMS: http://z3r0101.com/demo/content/cms
