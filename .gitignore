@@ -4,6 +4,3 @@
 .hgignore
 ._*
 compiles/
-.gitignore
-.htaccess
-index.php
