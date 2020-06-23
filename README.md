@@ -15,3 +15,9 @@ or (One liner command)
 ```
 git_repo_url=https://github.com/z3r0101/www-content.git; git init .; git remote add -t \* -f origin $git_repo_url; git pull $git_repo_url
 ```
+3. Open the z3r0101 setup in your browser
+  - Example:
+  - http://server/setup
+  - http://server/sample_project/setup (If your web project under the subdirectory)
+  
+4. Fill-up the z3r0101 setup form and submit.
