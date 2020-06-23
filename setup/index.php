@@ -95,6 +95,12 @@ if (isset($_POST['setup'])) {
             )
         );
 
+        $CONFIG['cookie']['prefix'] = $serverName;
+        $CONFIG['session']['prefix'] = $serverName;
+        $CONFIG['website']['path'] = $serverDocPath;
+        $CONFIG['website']['domain'] = $serverName;
+        $CONFIG['website']['url'] = rtrim(trim($serverHTTP),"/");
+
         $executed = true;
     }
 
@@ -189,11 +195,11 @@ $CONFIG['database'][0]['username'] = '<?=trim($_POST['input_database_username'])
 $CONFIG['database'][0]['password'] = '<?=trim($_POST['input_database_password'])?>';
 $CONFIG['database'][0]['name'] = '<?=trim($_POST['input_database_name'])?>';
 
-$CONFIG['cookie']['prefix'] = '<?=$serverName?>';
-$CONFIG['session']['prefix'] = '<?=$serverName?>';
-$CONFIG['website']['path'] = '<?=$serverDocPath?>';
-$CONFIG['website']['domain'] = "<?=$serverName?>";
-$CONFIG['website']['url'] = '<?=rtrim(trim($serverHTTP),"/")?>';
+$CONFIG['cookie']['prefix'] = '<?=$CONFIG['cookie']['prefix']?>';
+$CONFIG['session']['prefix'] = '<?=$CONFIG['session']['prefix']?>';
+$CONFIG['website']['path'] = '<?=$CONFIG['website']['path']?>';
+$CONFIG['website']['domain'] = "<?=$CONFIG['website']['domain']?>";
+$CONFIG['website']['url'] = '<?=$CONFIG['website']['url']?>';
                 </pre>
             </div>
             <strong>CMS Login Credential:</strong>
