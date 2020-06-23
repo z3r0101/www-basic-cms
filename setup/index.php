@@ -142,15 +142,15 @@ if (isset($_POST['setup'])) {
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Database Name</label>
-                <input type="text" class="form-control" name="input_database_name" value="<?=(isset($_POST['input_database_name'])) ? trim($_POST['input_database_name']) : 'test_zzz'?>" placeholder="Enter database name" required>
+                <input type="text" class="form-control" name="input_database_name" value="<?=(isset($_POST['input_database_name'])) ? trim($_POST['input_database_name']) : ''?>" placeholder="Enter database name" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Database User Name</label>
-                <input type="text" class="form-control" name="input_database_username" value="<?=(isset($_POST['input_database_username'])) ? trim($_POST['input_database_username']) : 'root'?>" placeholder="Enter database User Name" required>
+                <input type="text" class="form-control" name="input_database_username" value="<?=(isset($_POST['input_database_username'])) ? trim($_POST['input_database_username']) : ''?>" placeholder="Enter database User Name" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Database Password</label>
-                <input type="text" class="form-control" name="input_database_password" value="<?=(isset($_POST['input_database_password'])) ? trim($_POST['input_database_password']) : '1029384756'?>" placeholder="Enter database User Name" required>
+                <input type="text" class="form-control" name="input_database_password" value="<?=(isset($_POST['input_database_password'])) ? trim($_POST['input_database_password']) : ''?>" placeholder="Enter database User Name" required>
             </div>
             <hr>
             <h5>Content Management System</h5>
