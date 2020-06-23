@@ -204,7 +204,7 @@ $CONFIG['website']['url'] = '<?=$CONFIG['website']['url']?>';
             </div>
             <strong>CMS Login Credential:</strong>
             <div class="config_script" class="d-inline-block">
-                URL: <a href="<?=$CONFIG['website']['url'].$CONFIG['website']['domain'].'cms'?>"><?=$CONFIG['website']['url'].$CONFIG['website']['domain'].'cms'?></a><br>
+                URL: <a href="<?=$CONFIG['website']['url'].$CONFIG['website']['path'].'cms'?>"><?=$CONFIG['website']['url'].$CONFIG['website']['path'].'cms'?></a><br>
                 Username: <?=trim($_POST['input_cms_username'])?><br>
                 Password: <?=trim($_POST['input_cms_password'])?>
             </div>
