@@ -192,13 +192,13 @@ $CONFIG['database'][0]['name'] = '<?=trim($_POST['input_database_name'])?>';
 $CONFIG['cookie']['prefix'] = '<?=$serverName?>';
 $CONFIG['session']['prefix'] = '<?=$serverName?>';
 $CONFIG['website']['path'] = '<?=$serverDocPath?>';
-$CONFIG['website']['domain'] = "<?=$serverDocPath?>";
+$CONFIG['website']['domain'] = "<?=$serverName?>";
 $CONFIG['website']['url'] = '<?=rtrim(trim($serverHTTP),"/")?>';
                 </pre>
             </div>
             <strong>CMS Login Credential:</strong>
             <div class="config_script" class="d-inline-block">
-                URL: <a href="<?=rtrim(trim($_POST['input_website_url']),"/").((trim($_POST['input_website_path'])!='') ? trim($_POST['input_website_path']) : '/').'cms'?>"><?=rtrim(trim($_POST['input_website_url']),"/").((trim($_POST['input_website_path'])!='') ? trim($_POST['input_website_path']) : '/').'cms'?></a><br>
+                URL: <a href="<?=$CONFIG['website']['url'].$CONFIG['website']['domain'].'cms'?>"><?=$CONFIG['website']['url'].$CONFIG['website']['domain'].'cms'?></a><br>
                 Username: <?=trim($_POST['input_cms_username'])?><br>
                 Password: <?=trim($_POST['input_cms_password'])?>
             </div>
