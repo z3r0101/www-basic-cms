@@ -174,7 +174,7 @@ if (isset($_POST['setup'])) {
             <h5>Website</h5>
             <div class="form-group">
                 <label for="exampleInputEmail1">Website Domain</label>
-                <input type="text" class="form-control" name="input_website_domain" value="<?=(isset($_POST['input_website_domain'])) ? trim($_POST['input_website_domain']) : $serverName.'.com'?>" placeholder="Enter website domain (E.g. domain.com)" required>
+                <input type="text" class="form-control" name="input_website_domain" value="<?=(isset($_POST['input_website_domain'])) ? trim($_POST['input_website_domain']) : $serverName.''?>" placeholder="Enter website domain (E.g. domain.com)" required>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Website URL Path (If under the sub directory enter the name, else leave the default /)</label>
