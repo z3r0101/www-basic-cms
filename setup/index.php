@@ -4,6 +4,7 @@ $error = array();
 
 $serverName = (isset($_SERVER['SERVER_NAME'])) ? $_SERVER['SERVER_NAME'] : '';
 $serverHTTP = (isset($_SERVER['HTTP_HOST'])) ? 'http://'.$_SERVER['HTTP_HOST'] : '';
+$serverDocPath = rtrim(dirname($_SERVER['SCRIPT_NAME']), 'setup');
 
 if (isset($_POST['setup'])) {
     $CONFIG['database'][0]['host'] = trim($_POST['input_database_host_name']);
@@ -170,20 +171,6 @@ if (isset($_POST['setup'])) {
                 <label for="exampleInputEmail1">Last Name</label>
                 <input type="text" class="form-control" name="input_cms_lname" value="<?=(isset($_POST['input_cms_lname'])) ? trim($_POST['input_cms_lname']) : ''?>" placeholder="Enter CMS Last Name" required>
             </div>
-            <hr>
-            <h5>Website</h5>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Website Domain</label>
-                <input type="text" class="form-control" name="input_website_domain" value="<?=(isset($_POST['input_website_domain'])) ? trim($_POST['input_website_domain']) : $serverName.''?>" placeholder="Enter website domain (E.g. domain.com)" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Website URL Path (If under the sub directory enter the name, else leave the default /)</label>
-                <input type="text" class="form-control" name="input_website_path" value="<?=(isset($_POST['input_website_path'])) ? trim($_POST['input_website_path']) : '/'?>" placeholder="Enter website URL Path (E.g. /)" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Website URL</label>
-                <input type="text" class="form-control" name="input_website_url" value="<?=(isset($_POST['input_website_url'])) ? trim($_POST['input_website_url']) : $serverHTTP?>" placeholder="Enter website URL (E.g. http://domain.com)" required>
-            </div>
             <button class="btn btn-primary">Submit</button>
             <input type="hidden" name="setup" value="1">
         </form>
@@ -202,11 +189,11 @@ $CONFIG['database'][0]['username'] = '<?=trim($_POST['input_database_username'])
 $CONFIG['database'][0]['password'] = '<?=trim($_POST['input_database_password'])?>';
 $CONFIG['database'][0]['name'] = '<?=trim($_POST['input_database_name'])?>';
 
-$CONFIG['cookie']['prefix'] = '<?=($serverName=='') ? trim($_POST['input_website_domain']) : $serverName?>';
-$CONFIG['session']['prefix'] = '<?=($serverName=='') ? trim($_POST['input_website_domain']) : $serverName?>';
-$CONFIG['website']['path'] = '<?=(trim($_POST['input_website_path'])!='') ? trim($_POST['input_website_path']) : '/'?>';
-$CONFIG['website']['domain'] = "<?=trim($_POST['input_website_domain'])?>";
-$CONFIG['website']['url'] = '<?=rtrim(trim($_POST['input_website_url']),"/")?>';
+$CONFIG['cookie']['prefix'] = '<?=$serverName?>';
+$CONFIG['session']['prefix'] = '<?=$serverName?>';
+$CONFIG['website']['path'] = '<?=$serverDocPath?>';
+$CONFIG['website']['domain'] = "<?=$serverDocPath?>";
+$CONFIG['website']['url'] = '<?=rtrim(trim($serverHTTP),"/")?>';
                 </pre>
             </div>
             <strong>CMS Login Credential:</strong>
