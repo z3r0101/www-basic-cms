@@ -211,7 +211,7 @@ $CONFIG['website']['url'] = '<?=rtrim(trim($_POST['input_website_url']),"/")?>';
             </div>
             <strong>CMS Login Credential:</strong>
             <div class="config_script" class="d-inline-block">
-                URL: <a href="<?=rtrim(trim($_POST['input_website_url']),"/").'/cms'?>"><?=rtrim(trim($_POST['input_website_url']),"/").'/cms'?></a><br>
+                URL: <a href="<?=rtrim(trim($_POST['input_website_url']),"/").((trim($_POST['input_website_path'])!='') ? trim($_POST['input_website_path']) : '/').'cms'?>"><?=rtrim(trim($_POST['input_website_url']),"/").((trim($_POST['input_website_path'])!='') ? trim($_POST['input_website_path']) : '/').'cms'?></a><br>
                 Username: <?=trim($_POST['input_cms_username'])?><br>
                 Password: <?=trim($_POST['input_cms_password'])?>
             </div>
