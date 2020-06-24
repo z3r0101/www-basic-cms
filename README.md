@@ -1,4 +1,4 @@
-# z3r0101 - Content Management Sample
+# z3r0101 - Simple Content Management
 
 Before you download or clone this repo you must have already created the z3r0101 framework web project. 
 If you haven't created, follow this instructions: https://github.com/z3r0101/application/blob/master/README.md
