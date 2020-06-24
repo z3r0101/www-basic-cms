@@ -91,7 +91,7 @@ if (isset($_POST['setup'])) {
                 'CMS_Users_Password'=>$tCrypt->encrypt(trim($_POST['input_cms_password'])),
                 'CMS_Users_Status'=>1,
                 'CMS_Users_Date_Created'=>date("Y-m-d H:i:s"),
-                'CMS_Users_Website'=>trim($_POST['input_website_domain'])
+                'CMS_Users_Website'=>$serverName
             )
         );
 
