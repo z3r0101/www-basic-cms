@@ -32,7 +32,7 @@
 <body>
 
     @foreach($arrData as $Index => $Data)
-        <a href="content/{!!$Data['content_slug']!!}"><h1>{{$Data['content_title']}}</h1>
+        <a href="{!!$CONFIG['website']['path']!!}content/{!!$Data['content_slug']!!}"><h1>{{$Data['content_title']}}</h1>
         {!!($Data['content_image']!='') ? '<img src="'.$Data['content_image'].'" align="left">' : ''!!}
             {!!$Data['content_description']!!}</a>
         <hr>

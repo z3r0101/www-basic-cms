@@ -26,13 +26,14 @@
 
     #Redirect important directories
     RewriteCond %{REQUEST_URI} !application/resources/
+    RewriteCond %{REQUEST_URI} !setup/
     RewriteCond %{REQUEST_URI} !uploads/
     RewriteCond %{REQUEST_URI} !vendors/
     RewriteCond %{REQUEST_URI} !www/
-    RewriteRule (.*) www/$1 [L]
+    RewriteRule ^(.*) www/$1 [QSA,L]
 
     #Send request via index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ www/index.php/$1 [QSA,L]
+    RewriteRule ^(.*)$ www/index.php?/$1 [QSA,L]
 </IfModule>
