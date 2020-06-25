@@ -8,12 +8,12 @@ If you haven't created, follow this instructions: https://github.com/z3r0101/app
 2. Run the following git command below:
 ```
 # git init .
-# git remote add -t \* -f origin https://github.com/z3r0101/www-content.git
-# git pull https://github.com/z3r0101/www-content.git
+# git remote add -t \* -f origin https://github.com/z3r0101/www-basic-cms.git
+# git pull https://github.com/z3r0101/www-basic-cms.git
 ```
 or (One liner command)
 ```
-# git_repo_url=https://github.com/z3r0101/www-content.git; git init .; git remote add -t \* -f origin $git_repo_url; git pull $git_repo_url
+# git_repo_url=https://github.com/z3r0101/www-basic-cms.git; git init .; git remote add -t \* -f origin $git_repo_url; git pull $git_repo_url
 ```
 3. Open the z3r0101 setup in your browser
   - Example:
