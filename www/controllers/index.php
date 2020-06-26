@@ -12,6 +12,8 @@ class index extends BaseController
         global $CONFIG;
         if (count($this->requestSlug) == 0) {
             $this->loadView("fe_index", 1, ['self' => $this, 'CONFIG' => $CONFIG]);
+        } else {
+            $this->loadView("fe_404", 1, ['self' => $this, 'CONFIG' => $CONFIG]);
         }
     }
 
@@ -24,7 +26,10 @@ class index extends BaseController
                 $this->dbClass->mysqli->real_escape_string(implode('/', $this->requestSlug))
             )
         );
-
-        $this->loadView("fe_content", 1, ['self' => $this, 'CONFIG' => $CONFIG, 'content'=>$arrData[0]]);
+        if (count($arrData) > 0) {
+            $this->loadView("fe_content", 1, ['self' => $this, 'CONFIG' => $CONFIG, 'content' => $arrData[0]]);
+        } else {
+            $this->loadView("fe_404", 1, ['self' => $this, 'CONFIG' => $CONFIG]);
+        }
     }
 }
