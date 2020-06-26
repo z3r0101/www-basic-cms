@@ -30,9 +30,7 @@ hr {
 }
 
 @media (max-width: 1024px) {
-
-img {
-width: 60%;
-} 
-
+    img {
+        width: 60%;
+    } 
 } 
