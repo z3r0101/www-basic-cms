@@ -17,10 +17,16 @@
             save_message_autoclose="false"
     >
         <panel caption="Details">
-            <control type="upload" id="content_image" img_aspect_ratio="600:600" upload_parent_dir="content" upload_container_dir="image"></control>
+            <!--control type="upload" id="content_image" img_aspect_ratio="600:600" upload_parent_dir="content" upload_container_dir="image"></control-->
+            <control type="asset" id="content_image" caption="Image" asset_default_dir="content" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff" img_aspect_ratio="800:800"></control>
+            <control type="upload" id="content_upload" caption="Upload Test" img_aspect_ratio="600:600" upload_parent_dir="content" upload_container_dir="image_upload"></control>
             <control type="text" id="content_title" caption="Title" placeholder="" required="true"></control>
             <control type="text" input-type="date" id="content_date" caption="Date" placeholder="" required="true"></control>
-            <control type="html" id="content_description" caption="Description" placeholder="" required="true"></control>
+            <control type="html" id="content_description" caption="Description" placeholder="" required="true" toolbar="undo redo | content_description_image | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | link | hr | code">
+                <blocks>
+                    <block id="content_description_image" block_type="image" type="picture" caption="Picture" icon="far fa-image"></block>
+                </blocks>
+            </control>
         </panel>
         <script>
             <![CDATA[

@@ -1,11 +1,11 @@
 body {
     font-size: 1em;
     font-family: "Courier New";
-    margin: 1%;
-    padding: 1%;
+    margin: 0%;
+    padding: 0%;
 }
 
-img {
+img.content-img {
     width: 20%;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -30,7 +30,7 @@ hr {
 }
 
 @media (max-width: 1024px) {
-    img {
+    content-img.img {
         width: 60%;
     } 
 } 

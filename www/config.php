@@ -1,13 +1,13 @@
 <?php
 $CONFIG['environment'] = 'development'; #production | development
 
-$CONFIG['database'][0]['host'] = '';
-$CONFIG['database'][0]['username'] = '';
-$CONFIG['database'][0]['password'] = '';
-$CONFIG['database'][0]['name'] = '';
+$CONFIG['database'][0]['host'] = 'localhost';
+$CONFIG['database'][0]['username'] = 'root';
+$CONFIG['database'][0]['password'] = '1029384756';
+$CONFIG['database'][0]['name'] = 'z3r0101_demo_content';
 
-$CONFIG['cookie']['prefix'] = '';
-$CONFIG['session']['prefix'] = '';
-$CONFIG['website']['path'] = '';
-$CONFIG['website']['domain'] = "";
-$CONFIG['website']['url'] = '';
+$CONFIG['cookie']['prefix'] = 'centos8s2';
+$CONFIG['session']['prefix'] = 'centos8s2';
+$CONFIG['website']['path'] = '/test/';
+$CONFIG['website']['domain'] = "z3r0101.com";
+$CONFIG['website']['url'] = 'http://centos8s2:9003';

@@ -17,4 +17,5 @@
     //-->
 
     <section title="Content" link="content/list" role="admin|editor"></section>
+    <section title="Assets" link="assets" role="admin|editor"></section>
 </sections>
