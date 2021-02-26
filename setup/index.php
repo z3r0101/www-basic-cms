@@ -88,7 +88,7 @@ if (isset($_POST['setup'])) {
                 'CMS_Users_Name'=>trim($_POST['input_cms_username']),
                 'CMS_Users_Name_First'=>trim($_POST['input_cms_fname']),
                 'CMS_Users_Name_Last'=>trim($_POST['input_cms_lname']),
-                'CMS_Users_Password'=>$tCrypt->encrypt(trim($_POST['input_cms_password'])),
+                'CMS_Users_Password'=>$tCrypt->encode(trim($_POST['input_cms_password'])),
                 'CMS_Users_Status'=>1,
                 'CMS_Users_Date_Created'=>date("Y-m-d H:i:s"),
                 'CMS_Users_Website'=>$serverName
