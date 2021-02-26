@@ -82,7 +82,7 @@ if (isset($_POST['setup'])) {
         include_once "../application/classes/cryptonite.php";
         $dbClass = new cmsDatabaseClass(0);
         $tCrypt = new cmsCryptonite();
-        $dbClass->insert("cms_users",
+        $arrInsert = $dbClass->insert("cms_users",
             array(
                 'CMS_Users_Email'=>trim($_POST['input_cms_username']),
                 'CMS_Users_Name'=>trim($_POST['input_cms_username']),
@@ -95,13 +95,19 @@ if (isset($_POST['setup'])) {
             )
         );
 
-        $CONFIG['cookie']['prefix'] = $serverName;
-        $CONFIG['session']['prefix'] = $serverName;
-        $CONFIG['website']['path'] = $serverDocPath;
-        $CONFIG['website']['domain'] = $serverName;
-        $CONFIG['website']['url'] = rtrim(trim($serverHTTP),"/");
+        if (!isset($arrInsert['error'])) {
 
-        $executed = true;
+
+            $CONFIG['cookie']['prefix'] = $serverName;
+            $CONFIG['session']['prefix'] = $serverName;
+            $CONFIG['website']['path'] = $serverDocPath;
+            $CONFIG['website']['domain'] = $serverName;
+            $CONFIG['website']['url'] = rtrim(trim($serverHTTP), "/");
+
+            $executed = true;
+        } else {
+            $error[] = $arrInsert['error'];
+        }
     }
 
 }

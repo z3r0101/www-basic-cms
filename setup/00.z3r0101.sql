@@ -1,24 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.7.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2020 at 04:52 PM
--- Server version: 10.3.17-MariaDB
--- PHP Version: 7.2.11
+-- Generation Time: Feb 26, 2021 at 06:54 AM
+-- Server version: 10.3.25-MariaDB
+-- PHP Version: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `cms_users`
@@ -69,6 +61,36 @@ CREATE TABLE `cms_users_login` (
   `CMS_Users_Login_Type` int(11) NOT NULL DEFAULT 0 COMMENT '[0: Local, 1: SSO]',
   `CMS_Users_Login_SSO_Id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
--- --------------------------------------------------------
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cms_users`
+--
+ALTER TABLE `cms_users`
+  ADD PRIMARY KEY (`CMS_Users_Id`);
+
+--
+-- Indexes for table `cms_users_login`
+--
+ALTER TABLE `cms_users_login`
+  ADD PRIMARY KEY (`CMS_Users_Login_Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cms_users`
+--
+ALTER TABLE `cms_users`
+  MODIFY `CMS_Users_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- AUTO_INCREMENT for table `cms_users_login`
+--
+ALTER TABLE `cms_users_login`
+  MODIFY `CMS_Users_Login_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
