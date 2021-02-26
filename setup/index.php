@@ -78,6 +78,8 @@ if (isset($_POST['setup'])) {
             }
         }
 
+        sleep(10);
+
         include_once "../application/classes/database.php";
         include_once "../application/classes/cryptonite.php";
         $dbClass = new cmsDatabaseClass(0);
@@ -96,8 +98,6 @@ if (isset($_POST['setup'])) {
         );
 
         if (!isset($arrInsert['error'])) {
-
-
             $CONFIG['cookie']['prefix'] = $serverName;
             $CONFIG['session']['prefix'] = $serverName;
             $CONFIG['website']['path'] = $serverDocPath;
