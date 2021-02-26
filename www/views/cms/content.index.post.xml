@@ -15,14 +15,24 @@
             save_message="Content saved."
             save_message_button_new_caption="Create new content"
             save_message_autoclose="false"
+            save_message_action="1"
     >
         <panel caption="Details">
             <control type="asset" id="content_image" caption="Image" asset_default_dir="content" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff" img_aspect_ratio="800:800"></control>
             <control type="text" id="content_title" caption="Title" placeholder="" required="true"></control>
             <control type="text" input-type="date" id="content_date" caption="Date" placeholder="" required="true"></control>
             <control type="html" id="content_description" caption="Description" placeholder="" required="true" toolbar="undo redo | content_description_image | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | link | hr | code">
+                <settings>
+                    <item id="bootstrap_css" name="content_css"></item>
+                </settings>
                 <blocks>
-                    <block id="content_description_image" block_type="image" type="picture" caption="Picture" icon="far fa-image"></block>
+                    <block id="content_description_image" block_type="image" type="picture" caption="Insert Image" icon="far fa-image" context_menu="true" asset_default_dir="content">
+                        <action>
+                            <![CDATA[
+                                tinyMCE.activeEditor.insertContent('<img src="' + $('#block_picture').val() + '" class="img-fluid">');
+                            ]]>
+                        </action>
+                    </block>
                 </blocks>
             </control>
         </panel>

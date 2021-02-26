@@ -16,6 +16,8 @@ class content extends BaseControllerCMS
             function () {                                                                                                               
                 global $CONFIG;
 
+                $this->insertTagById("bootstrap_css", VENDORS_URL."bootstrap/4.3.1/css/bootstrap.min.css");
+
                 $this->postSubmittedEvent['end'] = function ($pArrData) {
                     $this->dbClass->update("content",
                         array(
