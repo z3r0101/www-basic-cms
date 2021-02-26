@@ -32,6 +32,7 @@ CREATE TABLE `cms_users` (
   `CMS_Users_Name_First` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `CMS_Users_Name_Last` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `CMS_Users_Email` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `CMS_Users_Super_Admin` int(11) NOT NULL DEFAULT 0 COMMENT '[0: No, 1: Yes]',
   `CMS_Users_Type` int(11) NOT NULL DEFAULT 0,
   `CMS_Users_Access` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `CMS_Users_Status` int(11) NOT NULL DEFAULT 0,
